@@ -5,6 +5,7 @@ import { connectDB } from "./db"
 
 
 // importing all routers here
+import HomeRouter from "./routes/Home"
 import BookingRouter from "./routes/Booking"
 
 
@@ -22,6 +23,7 @@ app.use(express.json())
 
 
 // using the routers
+app.use("/", HomeRouter)
 app.use("/api/booking", BookingRouter)
 
 
