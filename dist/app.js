@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const dotenv_1 = require("dotenv");
 const db_1 = require("./db");
 // importing all routers here
+const Home_1 = __importDefault(require("./routes/Home"));
 const Booking_1 = __importDefault(require("./routes/Booking"));
 // enabled environment variables
 (0, dotenv_1.config)();
@@ -17,6 +18,7 @@ const PORT = (process.env.PORT || 5000);
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.json());
 // using the routers
+app.use("/", Home_1.default);
 app.use("/api/booking", Booking_1.default);
 // starting the application
 const start = () => {
