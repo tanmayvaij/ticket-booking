@@ -41,7 +41,7 @@ http://127.0.0.1:5000/api/booking/fetchseats
 
 <br/>
 
-The below api is used to book an available seats. Replace <seatNo> with a number.
+The below api is used to book an available seats. Replace < seatNo > with a number.
 ```sh
 http://127.0.0.1:5000/api/booking/bookseats?seatNo=<seatNo>
 ```
